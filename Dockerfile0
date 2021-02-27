@@ -5,6 +5,6 @@ WORKDIR /app
 ENV GOPROXY https://mirrors.aliyun.com/goproxy
 VOLUME ["/app/config"]
 RUN ["go","build","go-fly.go"]
-RUN ["go-fly","install"]
+RUN ["/app/go-fly","install"]
 EXPOSE 8081
 CMD ["/app/go-fly","server"]
