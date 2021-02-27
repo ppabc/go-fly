@@ -1,5 +1,5 @@
 
-FROM golang:1.11.3-alpine3.8 as builder
+FROM golang:alpine as builder
 RUN mkdir /app
 COPY . /app
 ENV GOPROXY https://mirrors.aliyun.com/goproxy
