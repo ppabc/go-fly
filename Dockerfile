@@ -4,6 +4,7 @@ RUN mkdir /app
 COPY . /app
 ENV GOPROXY https://mirrors.aliyun.com/goproxy
 VOLUME ["/app/config"]
+WORKDIR /app/
 RUN ["go","build","go-fly.go"]
 RUN ["go-fly","install"]
 
