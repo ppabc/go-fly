@@ -13,5 +13,5 @@ FROM alpine:latest
 COPY --from=builder /app/go-fly  /app/go-fly
 
 EXPOSE 8081
-RUN ["/app/go-fly","install"]
+##RUN ["/app/go-fly","install"]
 CMD ["/app/go-fly","server"]
