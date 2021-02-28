@@ -14,6 +14,8 @@ COPY --from=builder /app/go-fly  /app/go-fly
 COPY --from=builder /app/static  /app/static
 COPY --from=builder /app/config  /app/config
 
+WORKDIR /app/
+
 EXPOSE 8081
 ##RUN ["/app/go-fly","install"]
 CMD ["/app/go-fly","server"]
